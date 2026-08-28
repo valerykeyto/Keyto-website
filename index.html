@@ -3,11 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Разбор личности по дате рождения | Валерий Якубцевич · KeyTo</title>
-<meta name="description" content="Разбор личности по дате рождения по системе KeyTo. Пойми характер, отношения и деньги. Бесплатный расчёт, курс и школа, личные консультации. 6+ лет практики.">
-<meta property="og:title" content="Валерий Якубцевич · Система KeyTo — цифровая психология">
-<meta property="og:description" content="Разбор личности по дате рождения. Бесплатный расчёт в боте, обучение, личные консультации.">
+<title>Разбор личности по дате рождения — Валерий Якубцевич · KeyTo</title>
+<meta name="description" content="Характер, отношения и деньги — по числам, без эзотерики. Разбор личности по дате рождения по системе KeyTo. Бесплатный расчёт, обучение и личные консультации.">
+<meta name="keywords" content="разбор личности по дате рождения, цифровая психология, система KeyTo, Валерий Якубцевич, характер по числам, совместимость, бесплатный расчёт">
+<meta name="author" content="Валерий Якубцевич">
+<meta name="theme-color" content="#170B20">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://www.valery-keyto.com/">
+<!-- ранний старт картинок HERO (чтобы интро точно проигралось при первом входе) -->
+<link rel="preload" as="image" href="assets/hero/sky.webp" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero/cloud-a.webp" media="(max-width:760px)">
+<link rel="preload" as="image" href="assets/hero/mountain.webp" media="(min-width:761px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero/pc-cloud1.webp" media="(min-width:761px)">
+<!-- Open Graph (превью при отправке ссылки) -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="KeyTo · Валерий Якубцевич">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://www.valery-keyto.com/">
+<meta property="og:title" content="Разбор личности по дате рождения — Валерий Якубцевич · KeyTo">
+<meta property="og:description" content="Характер, отношения и деньги — по числам, без эзотерики. Бесплатный расчёт в Telegram, обучение и личные консультации.">
+<meta property="og:image" content="https://www.valery-keyto.com/assets/og-image.jpg">
+<meta property="og:image:secure_url" content="https://www.valery-keyto.com/assets/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Валерий Якубцевич — автор системы KeyTo">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Разбор личности по дате рождения — Валерий Якубцевич · KeyTo">
+<meta name="twitter:description" content="Характер, отношения и деньги — по числам, без эзотерики. Бесплатный расчёт в Telegram.">
+<meta name="twitter:image" content="https://www.valery-keyto.com/assets/og-image.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://www.valery-keyto.com/#website","url":"https://www.valery-keyto.com/","name":"KeyTo — цифровая психология","inLanguage":"ru-RU"},
+{"@type":"Person","@id":"https://www.valery-keyto.com/#valery","name":"Валерий Якубцевич","jobTitle":"Автор системы KeyTo, специалист по цифровой психологии","image":"https://www.valery-keyto.com/assets/og-image.jpg","url":"https://www.valery-keyto.com/","sameAs":["https://instagram.com/valery_keyto","https://www.youtube.com/@valery_keyto","https://t.me/key_to_bot"]},
+{"@type":"Service","name":"Разбор личности по дате рождения","provider":{"@id":"https://www.valery-keyto.com/#valery"},"areaServed":"RU","description":"Характер, отношения и деньги по числам, без эзотерики: бесплатный расчёт, обучение и личные консультации по системе KeyTo."}
+]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
@@ -70,7 +105,13 @@
   .pl-bar i{position:absolute;inset:0;transform-origin:left;transform:scaleX(0);
     background:linear-gradient(90deg,var(--violet),var(--gold));animation:plBar 1.2s ease-out forwards}
   @keyframes plBar{to{transform:scaleX(1)}}
-  @media(prefers-reduced-motion:reduce){.preloader{display:none}}
+  /* при «Уменьшении движения» прелоадер НЕ прячем — просто успокаиваем анимацию (он всё равно показывается) */
+  @media(prefers-reduced-motion:reduce){
+    .pl-aura{animation:none;opacity:.85}
+    .pl-fill{animation:none;clip-path:inset(0 0 0 0)}
+    .pl-word,.pl-sub{animation:none;opacity:1;transform:none}
+    .pl-bar i{animation:plBar .9s ease-out forwards}
+  }
 
   /* products — прозрачный фон, глобальный космос просвечивает */
   #products{position:relative;overflow:hidden;padding-bottom:clamp(104px,15vw,168px)}
@@ -371,6 +412,40 @@
   @keyframes pcDrift1{from{translate:0 0}to{translate:3.5% -1.5%}}
   @keyframes pcDrift2{from{translate:0 0}to{translate:-4% 1%}}
   @media(prefers-reduced-motion:reduce){.pc-cloud1,.pc-cloud2{animation:none}}
+  /* HERO-интро. ГЛАВНОЕ ПРАВИЛО: видимость текста НЕ должна зависеть от анимации.
+     На троттлящих устройствах (iPhone 17 / встроенный браузер Telegram) анимации с задержкой
+     «застывают» на 0% и текст пропадает. Поэтому:
+       • десктоп — красивый fade+подъём + страховка .intro-done (JS форсит видимость);
+       • мобайл — сцена видна всегда, текст только СДВИГ (transform, без opacity) — спрятать не может. */
+  .hero-in .hc-stage{animation:hcArrive .9s ease-out both}
+  @keyframes hcArrive{from{opacity:0}to{opacity:1}}
+  .hero-in .hc-content > *{animation:hcRise .9s cubic-bezier(.22,.61,.36,1) both}
+  .hero-in .hc-content > *:nth-child(2){animation-delay:.1s}
+  .hero-in .hc-content > *:nth-child(3){animation-delay:.2s}
+  .hero-in .hc-content > *:nth-child(4){animation-delay:.3s}
+  @keyframes hcRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  /* СТРАХОВКА: JS через ~1.5с форсит контент героя видимым, что бы ни случилось с анимациями */
+  .intro-done .hc-stage,.intro-done .hc-content > *{opacity:1!important;transform:none!important;animation:none!important}
+  /* ВАРИАНТ B (по просьбе): на мобиле HERO и блок «Автор системы / Валерий Якубцевич» появляются СРАЗУ,
+     без анимаций появления — максимальная надёжность на iPhone 17 Pro, где анимации с задержкой
+     «замерзают» и прячут контент. */
+  @media(max-width:760px){
+    .hero-in .hc-stage{animation:none}
+    .hero-in .hc-content > *{animation:none}
+    /* блок #about — ревилы показываем сразу (имя «Валерий Якубцевич» больше не может пропасть) */
+    #about .rv,#about .r{opacity:1!important;transform:none!important;filter:none!important;transition:none!important;animation:none!important}
+    /* прелоадер — ЖИВАЯ, но надёжная анимация: только transform/opacity (клип-путь и тяжёлый blur убраны,
+       они «замерзали» на iPhone 17). Логотип виден всегда, полоса грузится бесконечно. */
+    .pl-aura{filter:blur(46px);opacity:.7;animation:plAura 2.6s ease-in-out infinite alternate}
+    .pl-logo .pl-fill{display:none}
+    .pl-logo .pl-ghost{opacity:.9;animation:plBreath 1.9s ease-in-out infinite}
+    .pl-word,.pl-sub{opacity:1;transform:none;animation:none}
+    .pl-bar i{right:auto;width:38%;transform:translateX(-120%);animation:plSweep 1.15s ease-in-out infinite}
+  }
+  @keyframes plBreath{0%,100%{opacity:.8;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+  @keyframes plSweep{0%{transform:translateX(-120%)}100%{transform:translateX(360%)}}
+  /* уменьшенное движение — без интро, сразу видно */
+  @media(prefers-reduced-motion:reduce){.hero-in .hc-stage,.hero-in .hc-content > *{animation:none}}
   .hc-scrim{position:absolute;inset:0;z-index:5;pointer-events:none;
     background:linear-gradient(180deg,rgba(10,6,18,.5) 0%,rgba(10,6,18,.14) 22%,transparent 40%,transparent 94%,rgba(15,8,30,.3) 100%)}
   .hc-content{position:absolute;inset:0;z-index:6;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
@@ -993,12 +1068,25 @@
   .pin-sec .finalcta{transform-origin:center 8%;will-change:transform;transform:rotateX(24deg) scale(.9)}
   @media(prefers-reduced-motion:reduce){.pin-sec .finalcta{transform:none}}
   /* ===== PERF: пропуск отрисовки оффскрин-секций (убирает микролаги скролла) ===== */
-  #reviews,#catalog,#faq,.pin-sec{content-visibility:auto;contain-intrinsic-size:1px 1200px}
+  /* content-visibility:auto убран — на iOS при быстром свайпе секции не успевали отрисоваться (чёрные пропуски) */
   /* мягче слои: фиксированные блюр-пятна кэшируем как слой */
   .glow{will-change:opacity}
   /* стабильные размеры медиа — без сдвигов макета (CLS) */
   .vcard video,.pcard-media video,.rung-media img,.rung-media video{contain:paint}
 </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112011617', 'ym');
+
+    ym(112011617, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112011617" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 
@@ -1058,9 +1146,9 @@
     <div class="nav-contact">
       <button type="button" class="nav-cta" id="navContact" aria-haspopup="true" aria-expanded="false">Связаться</button>
       <div class="nav-menu" id="navMenu" role="menu">
-        <a class="mm-item tg" href="https://telegram.me/valery_keyto_bot" target="_blank" rel="noopener" role="menuitem"><span>Telegram</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.8 18.6l.3-4.2 7.6-6.9c.3-.3-.1-.5-.5-.2L7.7 13.3l-4.1-1.3c-.9-.3-.9-.9.2-1.3l16-6.2c.7-.3 1.4.2 1.1 1.3l-2.7 12.8c-.2.9-.7 1.1-1.5.7l-3.9-2.9-1.9 1.8c-.2.2-.4.4-.8.4z"/></svg></a>
+        <a class="mm-item tg" href="https://t.me/valery_keyto_bot" target="_blank" rel="noopener" role="menuitem"><span>Telegram</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.8 18.6l.3-4.2 7.6-6.9c.3-.3-.1-.5-.5-.2L7.7 13.3l-4.1-1.3c-.9-.3-.9-.9.2-1.3l16-6.2c.7-.3 1.4.2 1.1 1.3l-2.7 12.8c-.2.9-.7 1.1-1.5.7l-3.9-2.9-1.9 1.8c-.2.2-.4.4-.8.4z"/></svg></a>
         <a class="mm-item wa" href="https://api.whatsapp.com/send/?phone=79168451427&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" role="menuitem"><span>WhatsApp</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2m4.52 11.99c-.2.58-1.19 1.11-1.67 1.18-.43.06-.97.09-1.56-.1-.36-.11-.82-.26-1.41-.52-2.48-1.07-4.11-3.57-4.23-3.74-.12-.16-1.01-1.34-1.01-2.56 0-1.22.63-1.82.86-2.07.23-.25.49-.31.66-.31h.48c.15.01.36-.05.56.43.21.5.71 1.73.77 1.85.06.12.1.26.02.43-.08.16-.13.27-.25.41-.12.14-.26.32-.37.43-.13.13-.25.26-.11.51.15.25.64 1.06 1.38 1.72.94.84 1.74 1.11 1.99 1.23.25.13.4.11.54-.06.14-.16.61-.72.78-.97.17-.25.33-.21.56-.13.22.09 1.44.69 1.69.81.25.12.41.18.47.29.07.11.07.6-.14 1.18"/></svg></a>
-        <a class="mm-item vk" href="https://vk.ru/im/convo/-226884904?entrypoint=community_page&tab=all" target="_blank" rel="noopener" role="menuitem"><span>ВКонтакте</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.16 16.5c-5.06 0-8.28-3.53-8.41-9.4h2.56c.09 4.31 2.05 6.05 3.53 6.42V7.1h2.42v3.68c1.46-.16 3-1.82 3.51-3.68h2.4c-.39 2.29-2.05 3.95-3.23 4.63 1.18.55 3.06 2 3.79 4.77h-2.64c-.57-1.77-1.98-3.14-3.83-3.33v3.33z"/></svg></a>
+        <a class="mm-item vk" href="https://vk.me/valeriy_keyto" target="_blank" rel="noopener" role="menuitem"><span>ВКонтакте</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.16 16.5c-5.06 0-8.28-3.53-8.41-9.4h2.56c.09 4.31 2.05 6.05 3.53 6.42V7.1h2.42v3.68c1.46-.16 3-1.82 3.51-3.68h2.4c-.39 2.29-2.05 3.95-3.23 4.63 1.18.55 3.06 2 3.79 4.77h-2.64c-.57-1.77-1.98-3.14-3.83-3.33v3.33z"/></svg></a>
       </div>
     </div>
     <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
@@ -1085,7 +1173,7 @@
         <h1>Разбор личности<br>по <span class="g">дате рождения</span></h1>
         <p class="hc-sub">Характер, отношения и деньги — по числам, без эзотерики.</p>
         <div class="hc-cta">
-          <a href="https://t.me/key_to_bot" class="btn btn-gold">Бесплатный расчёт →</a>
+          <a href="#about" class="btn btn-gold" data-hero-cta>Вселенная KeyTo →</a>
           <a href="#products" class="hc-link">Смотреть продукты ↓</a>
         </div>
       </div>
@@ -1208,7 +1296,7 @@
       <div class="pxf__content">
         <h2 class="pxf__title2">НАЧНИ<br>БЕСПЛАТНО</h2>
         <p class="pxf__sub">Расчёт личности в Telegram-боте + первая неделя в Клубе&nbsp;42 — без оплаты.</p>
-        <a href="https://t.me/key_to_bot" class="btn btn-hl">Получить расчёт</a>
+        <a href="https://t.me/key_to_bot?start=TGBOT" class="btn btn-hl">Получить расчёт</a>
       </div>
       <div class="pxf__layer pxf__img pxf__l4" data-pl="4"></div>
       <div class="pxf__fade"></div>
@@ -1308,7 +1396,7 @@
         <h2 class="hbold">Свяжитесь<br>с нами сейчас!</h2>
         <p class="lead" style="margin:16px auto 0">Мы расскажем подробнее о выбранном продукте. Любой вопрос можно задать нашей службе заботы.</p>
         <div class="channels">
-          <a href="https://t.me/key_to_bot" class="btn btn-gold">Telegram →</a>
+          <a href="https://t.me/valery_keyto_bot" class="btn btn-gold">Telegram →</a>
           <a href="https://api.whatsapp.com/send/?phone=79168451427" class="btn btn-ghost">WhatsApp</a>
           <a href="https://vk.me/valeriy_keyto" class="btn btn-ghost">ВКонтакте</a>
         </div>
@@ -1340,7 +1428,7 @@
         <ul>
           <li><a href="https://instagram.com/valery_keyto">Instagram</a></li>
           <li><a href="https://www.youtube.com/@valery_keyto">YouTube</a></li>
-          <li><a href="https://vk.com/valeriy_keyto">ВКонтакте</a></li>
+          <li><a href="https://vk.me/valeriy_keyto">ВКонтакте</a></li>
           <li><a href="https://www.tiktok.com/@valery_keyto">TikTok</a></li>
           <li><a href="https://t.me/valeriy_keyto">Telegram</a></li>
         </ul>
@@ -1348,20 +1436,20 @@
     </div>
     <div class="legal">
       <div>ООО «Цифровая Психология» · ИНН 6700016222<br>Политика конфиденциальности · Согласие на обработку ПД · Договор оферты</div>
-      <div class="doms"><b>valeriy-keyto.com</b> · <b>.ru</b></div>
+      <div class="doms"><b>valery-keyto.com</b> · <b>.ru</b></div>
     </div>
   </div>
 </footer>
 
 <!-- sticky mobile bar -->
 <div class="mobar">
-  <a href="https://t.me/key_to_bot" class="btn btn-gold">Бесплатный расчёт</a>
+  <a href="https://t.me/key_to_bot?start=TGBOT" class="btn btn-gold">Бесплатный расчёт</a>
   <div class="mobar-contact">
     <button type="button" class="btn btn-tg" id="mobarContact" aria-haspopup="true" aria-expanded="false">Связаться</button>
     <div class="mobar-menu" id="mobarMenu" role="menu">
-      <a class="mm-item tg" href="https://telegram.me/valery_keyto_bot" target="_blank" rel="noopener" role="menuitem"><span>Telegram</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.8 18.6l.3-4.2 7.6-6.9c.3-.3-.1-.5-.5-.2L7.7 13.3l-4.1-1.3c-.9-.3-.9-.9.2-1.3l16-6.2c.7-.3 1.4.2 1.1 1.3l-2.7 12.8c-.2.9-.7 1.1-1.5.7l-3.9-2.9-1.9 1.8c-.2.2-.4.4-.8.4z"/></svg></a>
+      <a class="mm-item tg" href="https://t.me/valery_keyto_bot" target="_blank" rel="noopener" role="menuitem"><span>Telegram</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.8 18.6l.3-4.2 7.6-6.9c.3-.3-.1-.5-.5-.2L7.7 13.3l-4.1-1.3c-.9-.3-.9-.9.2-1.3l16-6.2c.7-.3 1.4.2 1.1 1.3l-2.7 12.8c-.2.9-.7 1.1-1.5.7l-3.9-2.9-1.9 1.8c-.2.2-.4.4-.8.4z"/></svg></a>
       <a class="mm-item wa" href="https://api.whatsapp.com/send/?phone=79168451427&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" role="menuitem"><span>WhatsApp</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2m4.52 11.99c-.2.58-1.19 1.11-1.67 1.18-.43.06-.97.09-1.56-.1-.36-.11-.82-.26-1.41-.52-2.48-1.07-4.11-3.57-4.23-3.74-.12-.16-1.01-1.34-1.01-2.56 0-1.22.63-1.82.86-2.07.23-.25.49-.31.66-.31h.48c.15.01.36-.05.56.43.21.5.71 1.73.77 1.85.06.12.1.26.02.43-.08.16-.13.27-.25.41-.12.14-.26.32-.37.43-.13.13-.25.26-.11.51.15.25.64 1.06 1.38 1.72.94.84 1.74 1.11 1.99 1.23.25.13.4.11.54-.06.14-.16.61-.72.78-.97.17-.25.33-.21.56-.13.22.09 1.44.69 1.69.81.25.12.41.18.47.29.07.11.07.6-.14 1.18"/></svg></a>
-      <a class="mm-item vk" href="https://vk.ru/im/convo/-226884904?entrypoint=community_page&tab=all" target="_blank" rel="noopener" role="menuitem"><span>ВКонтакте</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.16 16.5c-5.06 0-8.28-3.53-8.41-9.4h2.56c.09 4.31 2.05 6.05 3.53 6.42V7.1h2.42v3.68c1.46-.16 3-1.82 3.51-3.68h2.4c-.39 2.29-2.05 3.95-3.23 4.63 1.18.55 3.06 2 3.79 4.77h-2.64c-.57-1.77-1.98-3.14-3.83-3.33v3.33z"/></svg></a>
+      <a class="mm-item vk" href="https://vk.me/valeriy_keyto" target="_blank" rel="noopener" role="menuitem"><span>ВКонтакте</span><svg class="mm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.16 16.5c-5.06 0-8.28-3.53-8.41-9.4h2.56c.09 4.31 2.05 6.05 3.53 6.42V7.1h2.42v3.68c1.46-.16 3-1.82 3.51-3.68h2.4c-.39 2.29-2.05 3.95-3.23 4.63 1.18.55 3.06 2 3.79 4.77h-2.64c-.57-1.77-1.98-3.14-3.83-3.33v3.33z"/></svg></a>
     </div>
   </div>
 </div>
@@ -1384,10 +1472,55 @@
 (function(){
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // preloader — hide after logo fills (~1.3s)
-  var pl=document.getElementById('preloader');
-  if(pl){ setTimeout(function(){ pl.classList.add('done');
-    setTimeout(function(){ pl.style.display='none'; }, 700); }, reduce?0:1300); }
+  // ── BOOT: прелоадер ждёт декодирование картинок HERO, потом гарантированно запускает hero-интро ──
+  // Зачем: на новом устройстве (холодный кэш) фон героя не успевал прогрузиться к моменту скрытия
+  // заставки — и «полёт в облака» не проигрывался. Теперь держим заставку до готовности картинок
+  // (минимум ~2с чтобы интро точно было видно), с жёстким потолком, и повторяем при перезагрузке / bfcache.
+  (function(){
+    var root=document.documentElement;
+    var pl=document.getElementById('preloader');
+    var MINSHOW = 2000;                   // минимум видимости заставки (одинаково на всех устройствах, чтобы не мелькала)
+    var MAXWAIT = 4200;                   // потолок ожидания картинок (медленная сеть)
+    var revealed=false;
+
+    function heroAssets(){
+      var wide = matchMedia('(min-width:761px)').matches;
+      return wide
+        ? ['assets/hero/mountain.webp','assets/hero/pc-cloud1.webp','assets/hero/pc-cloud2.webp','assets/hero/pc-fg.webp']
+        : ['assets/hero/sky.webp','assets/hero/cloud-a.webp','assets/hero/cloud-b.webp','assets/hero/fg.webp'];
+    }
+    function preload(list){
+      return Promise.all(list.map(function(src){
+        return new Promise(function(res){
+          var im=new Image();
+          im.onload=function(){ if(im.decode){ im.decode().then(res,res); } else res(); };
+          im.onerror=res;
+          im.src=src;
+        });
+      }));
+    }
+    var safeT=0;
+    function reveal(){
+      if(revealed) return; revealed=true;
+      root.classList.add('hero-in');                       // → запускает CSS-интро героя
+      if(pl){ pl.classList.add('done'); setTimeout(function(){ if(pl) pl.style.display='none'; }, 700); }
+      // СТРАХОВКА: гарантированно показать контент героя, даже если анимации затроттлились
+      clearTimeout(safeT); safeT=setTimeout(function(){ root.classList.add('intro-done'); }, reduce?200:1600);
+    }
+    function start(){
+      revealed=false; clearTimeout(safeT);
+      if(pl){ pl.style.display=''; pl.classList.remove('done'); }
+      root.classList.remove('hero-in'); root.classList.remove('intro-done'); void root.offsetWidth;   // reflow — интро перезапустится
+      var ready = preload(heroAssets());
+      var minT  = new Promise(function(r){ setTimeout(r, MINSHOW); });
+      var cap   = new Promise(function(r){ setTimeout(r, MAXWAIT); });
+      // ждём (картинки И минимум времени) ИЛИ потолок — что раньше
+      Promise.race([ Promise.all([ready, minT]), cap ]).then(reveal);
+    }
+    start();
+    // Safari back/forward cache: страница возвращается «готовой» — перезапускаем заставку и интро
+    addEventListener('pageshow', function(e){ if(e.persisted) start(); });
+  })();
 
   // (inertial scroll removed — native scrolling is smoother and non-blocking)
 
@@ -1526,13 +1659,14 @@
   (function(){
     var els=[].slice.call(document.querySelectorAll('.tba'));
     if(reduce){els.forEach(function(el){el.classList.add('in');});return;}
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.3});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0,rootMargin:'500px 0px'});
     els.forEach(function(el){io.observe(el);});
   })();
 
   // reveal (.r базовый, .rv премиум blur+rise)
   if(!reduce){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    // большой запас (700px) — контент проявляется ЗАРАНЕЕ, чтобы быстрый свайп не обгонял ревил (нет пустых кадров)
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0,rootMargin:'700px 0px 700px 0px'});
     document.querySelectorAll('.r, .rv').forEach(function(el){if(!el.classList.contains('in'))io.observe(el)});
   } else { document.querySelectorAll('.r, .rv').forEach(function(el){el.classList.add('in')}); }
 
